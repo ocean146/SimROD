@@ -47,14 +47,9 @@
 </p>
 
 <p align="center">
-  <figure style="display:inline-block; text-align:center;">
+  <!-- <figure style="display:inline-block; text-align:center;"> -->
     <img src="./figures/teaser_green.png" alt="Image 1" width="95%">
-    <figcaption style="text-align:center;">Green channels of RAW contain more informative signals.</figcaption>
-  </figure>
-  <!-- <figure style="display:inline-block; text-align:center; margin-left:20px;">
-    <img src="./figures/rawdet_task.png" alt="Image 2" width="20%">
-    <figcaption>图解：这里是第二张图片的说明文字。</figcaption>
-  </figure> -->
+    Green channels of RAW contain more informative signals
 </p>
 
 ## 🚀 Updates
