@@ -53,15 +53,11 @@ class YOLOX(nn.Module):
         self.backbone = backbone
         self.head = head
 
-        self.clamp = rod
 
     def forward(self, x, targets=None):
         # 2023-04-19 Modified by Huawei, apply adaptive adjustment module on RAW inputs
         x_tm = self.TMM(x)
-        if self.clamp:
-            x_tm = torch.clamp(x_tm, 0, 1) * 255.0
-        else:
-            x_tm = x_tm * 255.0
+        x_tm = x_tm * 255.0
         
         # import pdb;pdb.set_trace()
         # fpn output content features of [dark3, dark4, dark5]

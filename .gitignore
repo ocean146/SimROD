@@ -2,3 +2,4 @@ weights/*.pth
 ./data
 **/__pycache__
 upload
+.ipynb_checkpoints
