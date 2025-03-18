@@ -1,4 +1,4 @@
 weights/*.pth
-data
+./data
 **/__pycache__
 upload
