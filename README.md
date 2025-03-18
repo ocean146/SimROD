@@ -24,10 +24,10 @@ SimROD_vs_DIAP
                 |-- ...
 ```
 2. Preprocess the RAW images as follows:
-```python
+```bash
 python scripts/preprocess_raw.py -p data/ROD/raws/00Train
 ```
-3. Download the annotation files from here and move the files to `data/ROD/annotations/`.
+3. Download the annotation files from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/1ytnI99dlO3_9--Oh_RazIQ) or [GoogleDrive](https://drive.google.com/drive/folders/16PFJlnKAPrqrYwBluT-iDOP3lMtxphVq?usp=sharing) and move the files to `data/ROD/annotations/`.
 
 ### LOD and PASCALRAW
 To align with current public available work, we use the version of LOD and PASCALRAW from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). The download link and preprocess code can be obtained from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). We provide the COCO-format annotation files of LOD and PASCALRAW, which can be downloaded in here. 
