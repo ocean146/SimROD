@@ -49,7 +49,7 @@
 <p align="center">
   <figure style="display:inline-block; text-align:center;">
     <img src="./figures/teaser_green.png" alt="Image 1" width="95%">
-    <figcaption>Green channels of RAW contain more informative signals.</figcaption>
+    <figcaption style="text-align:center;">Green channels of RAW contain more informative signals.</figcaption>
   </figure>
   <!-- <figure style="display:inline-block; text-align:center; margin-left:20px;">
     <img src="./figures/rawdet_task.png" alt="Image 2" width="20%">
