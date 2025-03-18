@@ -1,0 +1,4 @@
+weights/*.pth
+data
+**/__pycache__
+upload
