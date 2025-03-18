@@ -1,5 +1,64 @@
-# SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements
-This is the official implementation of SimROD ([Arxiv](https://arxiv.org/abs/2503.07101)). SimROD is a lightweight and effective approach for RAW object detection. By introducing a Global Gamma Enhancement (GGE) module and leveraging the green channel's richer signal to enhance local details, the SimROD outperforms state-of-the-art methods while remaining efficient.
+<h2 align="center">
+  SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements
+</h2>
+
+<p align="center">
+    <a href="https://github.com/ShihuaHuang95/DEIM/blob/master/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/LICENSE-Apache%202.0-blue">
+    </a>
+    <a href="https://arxiv.org/abs/2503.07101">
+        <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2503.07101-red">
+    </a>
+   <!-- <a href="https://www.shihuahuang.cn/DEIM/">
+        <img alt="project webpage" src="https://img.shields.io/badge/Webpage-DEIM-purple">
+    </a> -->
+    <!-- <a href="https://github.com/ocean146/simrod/pulls">
+        <img alt="prs" src="https://img.shields.io/github/issues-pr/ocean146/pulls">
+    </a>
+    <a href="https://github.com/ShihuaHuang95/DEIM/issues">
+        <img alt="issues" src="https://img.shields.io/github/issues/ShihuaHuang95/DEIM?color=olive">
+    </a> -->
+    <!-- <a href="https://github.com/ShihuaHuang95/DEIM">
+        <img alt="stars" src="https://img.shields.io/github/stars/ShihuaHuang95/DEIM">
+    </a> -->
+    <a href="mailto:whuocean@whu.edu.cn">
+        <img alt="Contact Us" src="https://img.shields.io/badge/Contact-Email-yellow">
+    </a>
+</p>
+<p align="center">
+    SimROD is a lightweight and effective approach for RAW object detection. By introducing a Global Gamma Enhancement (GGE) module and leveraging the green channel's richer signal to enhance local details, the SimROD outperforms state-of-the-art methods while remaining efficient.
+</p>
+
+<div align="center">
+  <a href="https://ocean146.github.io/">Haiyang Xie</a><sup>1,2</sup>,
+  <a href="https://xishen0220.github.io">Xi Shen</a><sup>2</sup>
+  <a href="http://www.shihuahuang.cn">Shihua Huang</a><sup>2</sup>,
+  Qirui Wang<sup>1,2</sup>,
+  Zheng Wang<sup>1</sup>
+</div>
+
+<p align="center">
+<i>
+1. Wuhan University &nbsp; 2. Intellindust AI Lab
+</i>
+</p>
+<p align="center">
+<strong>If you like our work, please give us a ⭐!</strong>
+</p>
+
+<p align="center">
+  <img src="./figures/teaser_green.png" alt="Image 1" width="80%">
+  <!-- <img src="./figures/teaser_b.png" alt="Image 2" width="49%"> -->
+  <br>
+  <span style="display:block; text-align:center; font-size: 1em; color: #555;">Green channels contain more informative signals.</span>
+</p>
+
+## 🚀 Updates
+- [x] **\[2025.03.18\]** The code is released.
+- [x] **\[2025.03.10\]** The paper is available on ArXiv.
+
+## Table of Content
+* [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
 
 ## Requirements
 Just execute the command below:
