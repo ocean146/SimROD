@@ -47,10 +47,14 @@
 </p>
 
 <p align="center">
-  <img src="./figures/teaser_green.png" alt="Image 1" width="80%">
-  <!-- <img src="./figures/teaser_b.png" alt="Image 2" width="49%"> -->
-  <br>
-  <span style="display:block; text-align:center; font-size: 1em; color: #555;">Green channels contain more informative signals.</span>
+  <figure style="display:inline-block; text-align:center;">
+    <img src="./figures/teaser_green.png" alt="Image 1" width="95%">
+    <figcaption>Green channels of RAW contain more informative signals.</figcaption>
+  </figure>
+  <!-- <figure style="display:inline-block; text-align:center; margin-left:20px;">
+    <img src="./figures/rawdet_task.png" alt="Image 2" width="20%">
+    <figcaption>图解：这里是第二张图片的说明文字。</figcaption>
+  </figure> -->
 </p>
 
 ## 🚀 Updates
@@ -59,14 +63,21 @@
 
 ## Table of Content
 * [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
+* [2. Data Preparation](https://github.com/ocean146/simrod?tab=readme-ov-file#2-data-preparation)
+* [3. Evaluation](https://github.com/ocean146/simrod?tab=readme-ov-file#3-evaluation)
+* [4. Model Performance](https://github.com/ocean146/simrod?tab=readme-ov-file#4-model-performance)
+* [5. Training](https://github.com/ocean146/simrod?tab=readme-ov-file#5-training)
+* [6. Acknowledgement](https://github.com/ocean146/simrod?tab=readme-ov-file#6-acknowledgement)
+* [7. Citation](https://github.com/ocean146/simrod?tab=readme-ov-file#7-citation)
 
-## Requirements
+
+## 1. Requirements
 Just execute the command below:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Data Preparation
+## 2. Data Preparation
 ### ROD
 
 > During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided. 
@@ -114,7 +125,7 @@ SimROD_yolox
                 ...
 ```
 
-## Evaluation
+## 3. Evaluation
 1. Modified the dataset path in config files. For example, when testing SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
 
 2. Download all the weights from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD_vs_DIAP/weights`
@@ -126,14 +137,14 @@ CUDA_VISIBLE_DEVICES=0 python eval.py \
     -c SimROD_vs_DIAP/weights/simrod_lod_ap50_46.3.pth
 ```
 
-## Model Performance
+## 4. Model Performance
 |             | ROD  | LOD  | PASCALRAW | Add. Params(M) |
 |-------------|------|------|-----------|----------------|
 | [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD)        | 53.4 | 43.4 | 94.2      | 0.260          |
 | Ours SimROD | 57.6 | 46.3 | 95.1      | 0.003          |
 
 
-## Training
+## 5. Training
 1. Modified the dataset path in config files. For example, when training SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
 
 2. Download all the weights from here to `SimROD_vs_DIAP/weights`
@@ -145,15 +156,21 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
     -d 3 \
     -b 12
 ```
-## Acknowledgement
+## 6. Acknowledgement
 This project builds upon the [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD) and [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX). We are deeply grateful for their work and contributions. 
 
-If you find this GitHub repository useful, please consider citing us as follows:
+## 7. Citation
+
+If you use `SimROD` or its methods in your work, please cite the following BibTeX entries:
+<details open>
+<summary> bibtex </summary>
+
 ```latex
-@misc{xie2025simrodsimplebaselineraw,
-      title={SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements}, 
-      author={Haiyang Xie and Xi Shen and Shihua Huang and Zheng Wang},
-      year={2025},
+@misc{xie2025simr,
+      title={SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements},
+      author={Haiyang Xie, Xi Shen , Shihua Huang, Qirui Wang and Zheng Wang},
       archivePrefix={arXiv},
+      year={2025},
 }
 ```
+</details>
