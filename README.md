@@ -75,6 +75,7 @@ pip install -r requirements.txt
 ## 2. Data Preparation
 
 ### ROD
+
 <details close>
 > During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided. 
 
