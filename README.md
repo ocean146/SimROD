@@ -48,9 +48,9 @@
 
 <p align="center">
   <!-- <figure style="display:inline-block; text-align:center;"> -->
-    <img src="./figures/teaser_green.png" alt="Image 1" width="95%">
-    Green channels of RAW contain more informative signals
+    <img src="./figures/framework.png" alt="Image 1" width="100%">
 </p>
+<b>The overview of our proposed SimROD</b>. SimROD takes a packed RAW image as input and first learns a global gamma transformation through the Global Gamma Enhancement (GGE) module. The transformed data is then processed by Green-Guided Local Enhancement (GGLE) to enhance local details.
 
 ## 🚀 Updates
 - [x] **\[2025.03.18\]** The code is released.
