@@ -73,8 +73,9 @@ pip install -r requirements.txt
 ```
 
 ## 2. Data Preparation
-### ROD
 
+### ROD
+<details close>
 > During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided. 
 
 1. Download `00Train-raws.zip` from [here](https://openi.pcl.ac.cn/innovation_contest/innov202305091731448/datasets?lang=en-US) and arrange the images files in the following format:
@@ -93,8 +94,10 @@ SimROD_vs_DIAP
 python scripts/preprocess_raw.py -p data/ROD/raws/00Train
 ```
 3. Download the annotation files from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/1ytnI99dlO3_9--Oh_RazIQ) or [GoogleDrive](https://drive.google.com/drive/folders/16PFJlnKAPrqrYwBluT-iDOP3lMtxphVq?usp=sharing) and move the files to `data/ROD/annotations/`.
+</details>
 
 ### LOD and PASCALRAW
+<details close>
 To align with current public available work, we use the version of LOD and PASCALRAW from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). The download link and preprocess code can be obtained from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). We provide the COCO-format annotation files of LOD and PASCALRAW, which can be downloaded in here. 
 
 The dataset are supposed to be organized as follows:
@@ -119,6 +122,7 @@ SimROD_yolox
                 |-- 2014_000002.png
                 ...
 ```
+</details>
 
 ## 3. Evaluation
 1. Modified the dataset path in config files. For example, when testing SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
