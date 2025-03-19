@@ -54,7 +54,7 @@
 
 ## 🚀 Updates
 - [x] **\[2025.03.18\]** The code is released.
-- [x] **\[2025.03.10\]** The paper is available on ArXiv.
+- [x] **\[2025.03.10\]** The paper is available on [ArXiv](https://arxiv.org/abs/2503.07101).
 
 ## Table of Content
 * [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
