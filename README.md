@@ -35,7 +35,7 @@
   <a href="https://ocean146.github.io/">Haiyang Xie</a><sup>1,2</sup>,
   <a href="https://xishen0220.github.io">Xi Shen</a><sup>2</sup>
   <a href="http://www.shihuahuang.cn">Shihua Huang</a><sup>2</sup>,
-  Qirui Wang<sup>1,2</sup>,
+  <a href="https://qiruiwang0728.github.io/homepage/"> Qirui Wang</a><sup>1,2</sup>, 
   <a href="https://wangzwhu.github.io/home/">Zheng Wang</a><sup>1</sup>
 </div>
 
