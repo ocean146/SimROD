@@ -147,7 +147,7 @@ CUDA_VISIBLE_DEVICES=0 python eval.py \
 ## 5. Training
 1. Modified the dataset path in config files. For example, when training SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
 
-2. Download all the weights from here to `SimROD_vs_DIAP/weights`
+2. Download all the YOLO-X pretrained weight from [here](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.pth) or [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD_vs_DIAP/weights`
 
 3. Execute the command below:
 ```bash
