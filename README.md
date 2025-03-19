@@ -25,9 +25,11 @@
         <img alt="Contact Us" src="https://img.shields.io/badge/Contact-Email-yellow">
     </a>
 </p>
+<!--
 <p align="center">
     SimROD is a lightweight and effective approach for RAW object detection. By introducing a Global Gamma Enhancement (GGE) module and leveraging the green channel's richer signal to enhance local details, the SimROD outperforms state-of-the-art methods while remaining efficient.
 </p>
+-->
 
 <div align="center">
   <a href="https://ocean146.github.io/">Haiyang Xie</a><sup>1,2</sup>,
@@ -50,11 +52,11 @@
   <!-- <figure style="display:inline-block; text-align:center;"> -->
     <img src="./figures/framework.png" alt="Image 1" width="100%">
 </p>
-<b>The overview of our proposed SimROD</b>. SimROD takes a packed RAW image as input and first learns a global gamma transformation through the Global Gamma Enhancement (GGE) module. The transformed data is then processed by Green-Guided Local Enhancement (GGLE) to enhance local details.
+<b>Overview of SimROD</b>. It takes a packed RAW image as input, applies global gamma correction via the GGE module, and enhances local details using GGLE.
 
 ## 🚀 Updates
 - [x] **\[2025.03.18\]** The code is released.
-- [x] **\[2025.03.10\]** The paper is available on [ArXiv](https://arxiv.org/abs/2503.07101).
+- [x] **\[2025.03.10\]** The paper is available on [arXiv](https://arxiv.org/abs/2503.07101).
 
 ## Table of Content
 * [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
@@ -77,6 +79,8 @@ pip install -r requirements.txt
 ### ROD
 
 <details close>
+<summary> Prepare ROD Dataset </summary>
+  
 > During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided. 
 
 1. Download `00Train-raws.zip` from [here](https://openi.pcl.ac.cn/innovation_contest/innov202305091731448/datasets?lang=en-US) and arrange the images files in the following format:
@@ -99,6 +103,8 @@ python scripts/preprocess_raw.py -p data/ROD/raws/00Train
 
 ### LOD and PASCALRAW
 <details close>
+<summary> Prepare LOD and PASCALRAW Dataset </summary>
+  
 To align with current public available work, we use the version of LOD and PASCALRAW from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). The download link and preprocess code can be obtained from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). We provide the COCO-format annotation files of LOD and PASCALRAW, which can be downloaded in here. 
 
 The dataset are supposed to be organized as follows:
