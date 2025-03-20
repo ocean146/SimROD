@@ -9,9 +9,9 @@
     <a href="https://arxiv.org/abs/2503.07101">
         <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2503.07101-red">
     </a>
-   <!-- <a href="https://www.shihuahuang.cn/DEIM/">
+   <a href="https://ocean146.github.io/simrod_page/">
         <img alt="project webpage" src="https://img.shields.io/badge/Webpage-DEIM-purple">
-    </a> -->
+    </a>
     <!-- <a href="https://github.com/ocean146/simrod/pulls">
         <img alt="prs" src="https://img.shields.io/github/issues-pr/ocean146/pulls">
     </a>
