@@ -9,7 +9,7 @@
     <a href="https://arxiv.org/abs/2503.07101">
         <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2503.07101-red">
     </a>
-   <a href="https://ocean146.github.io/simrod_page/">
+   <a href="https://ocean146.github.io/SimROD2025/">
         <img alt="project webpage" src="https://img.shields.io/badge/Webpage-SimROD-purple">
     </a>
     <!-- <a href="https://github.com/ocean146/simrod/pulls">
