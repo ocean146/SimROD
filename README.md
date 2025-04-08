@@ -164,7 +164,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
 ```
 ## 6. Acknowledgement
 This project builds upon the [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD) and [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX). We are deeply grateful for their work and contributions. 
-
+We would like to express our sincere gratitude to the following individuals for their invaluable advice and support: Zechao Hu, Hao Li, Zhengwei Yang, Song Ouyang, Jingyu Xu, Likai Tian, Runqi Wang.
 ## 7. Citation
 
 If you use `SimROD` or its methods in your work, please cite the following BibTeX entries:
