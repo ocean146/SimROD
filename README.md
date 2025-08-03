@@ -55,21 +55,24 @@
 <b>Overview of SimROD</b>. It takes a packed RAW image as input, applies global gamma correction via the GGE module, and enhances local details using GGLE.
 
 ## 🚀 Updates
+
 - [x] **\[2025.03.18\]** The code is released.
 - [x] **\[2025.03.10\]** The paper is available on [arXiv](https://arxiv.org/abs/2503.07101).
 
 ## Table of Content
-* [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
-* [2. Data Preparation](https://github.com/ocean146/simrod?tab=readme-ov-file#2-data-preparation)
-* [3. Evaluation](https://github.com/ocean146/simrod?tab=readme-ov-file#3-evaluation)
-* [4. Model Performance](https://github.com/ocean146/simrod?tab=readme-ov-file#4-model-performance)
-* [5. Training](https://github.com/ocean146/simrod?tab=readme-ov-file#5-training)
-* [6. Acknowledgement](https://github.com/ocean146/simrod?tab=readme-ov-file#6-acknowledgement)
-* [7. Citation](https://github.com/ocean146/simrod?tab=readme-ov-file#7-citation)
 
+- [1. Requirements](https://github.com/ocean146/simrod?tab=readme-ov-file#1-requirements)
+- [2. Data Preparation](https://github.com/ocean146/simrod?tab=readme-ov-file#2-data-preparation)
+- [3. Evaluation](https://github.com/ocean146/simrod?tab=readme-ov-file#3-evaluation)
+- [4. Model Performance](https://github.com/ocean146/simrod?tab=readme-ov-file#4-model-performance)
+- [5. Training](https://github.com/ocean146/simrod?tab=readme-ov-file#5-training)
+- [6. Acknowledgement](https://github.com/ocean146/simrod?tab=readme-ov-file#6-acknowledgement)
+- [7. Citation](https://github.com/ocean146/simrod?tab=readme-ov-file#7-citation)
 
 ## 1. Requirements
+
 Just execute the command below:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -81,11 +84,12 @@ pip install -r requirements.txt
 <details close>
 <summary> Prepare ROD Dataset </summary>
   
-> During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided. 
+> During this project, we could only obtain the images and labels of the publicly available training set. Therefore, we randomly divided the acquired dataset, with 80% allocated for training and 20% for testing. The ROD dataset mentioned in this work refers to the version that we randomly divided.
 
 1. Download `00Train-raws.zip` from [here](https://openi.pcl.ac.cn/innovation_contest/innov202305091731448/datasets?lang=en-US) and arrange the images files in the following format:
+
 ```
-SimROD_vs_DIAP
+SimROD
 |-- data
     |-- ROD
         |-- raws
@@ -94,20 +98,25 @@ SimROD_vs_DIAP
                 |-- name2.raw
                 |-- ...
 ```
+
 2. Preprocess the RAW images as follows:
+
 ```bash
 python scripts/preprocess_raw.py -p data/ROD/raws/00Train
 ```
+
 3. Download the annotation files from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/1ytnI99dlO3_9--Oh_RazIQ) or [GoogleDrive](https://drive.google.com/drive/folders/16PFJlnKAPrqrYwBluT-iDOP3lMtxphVq?usp=sharing) and move the files to `data/ROD/annotations/`.
 </details>
 
 ### LOD and PASCALRAW
+
 <details close>
 <summary> Prepare LOD and PASCALRAW Dataset </summary>
   
-To align with current public available work, we use the version of LOD and PASCALRAW from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). The download link and preprocess code can be obtained from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). We provide the COCO-format annotation files of LOD and PASCALRAW, which can be downloaded in here. 
+To align with current public available work, we use the version of LOD and PASCALRAW from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). The download link and preprocess code can be obtained from [RAW-Adapter](https://github.com/cuiziteng/ECCV_RAW_Adapter). We provide the COCO-format annotation files of LOD and PASCALRAW, which can be downloaded in here.
 
 The dataset are supposed to be organized as follows:
+
 ```
 SimROD_yolox
 |-- data
@@ -129,46 +138,55 @@ SimROD_yolox
                 |-- 2014_000002.png
                 ...
 ```
+
 </details>
 
 ## 3. Evaluation
-1. Modified the dataset path in config files. For example, when testing SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
 
-2. Download all the weights from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD_vs_DIAP/weights`
+1. Modified the dataset path in config files. For example, when testing SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD/workdirs/LOD/cfg_SimROD.py`
+
+2. Download all the weights from [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD/weights`
 3. Execute the command below:
+
 ```bash
 CUDA_VISIBLE_DEVICES=0 python eval.py \
-    -f SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py \
+    -f SimROD/workdirs/LOD/cfg_SimROD.py \
     -b 8 \
-    -c SimROD_vs_DIAP/weights/simrod_lod_ap50_46.3.pth
+    -c SimROD/weights/simrod_lod_ap50_46.3.pth
 ```
 
 ## 4. Model Performance
-|             | ROD  | LOD  | PASCALRAW | Add. Params(M) |
-|-------------|------|------|-----------|----------------|
-| [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD)        | 53.4 | 43.4 | 94.2      | 0.260          |
-| Ours SimROD | 57.6 | 46.3 | 95.1      | 0.003          |
 
+|                                                         | ROD  | LOD  | PASCALRAW | Add. Params(M) |
+| ------------------------------------------------------- | ---- | ---- | --------- | -------------- |
+| [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD) | 53.4 | 43.4 | 94.2      | 0.260          |
+| Ours SimROD                                             | 57.6 | 46.3 | 95.1      | 0.003          |
 
 ## 5. Training
-1. Modified the dataset path in config files. For example, when training SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD_vs_DIAP/workdirs/LOD/cfg_SimROD.py`
 
-2. Download all the YOLO-X pretrained weight from [here](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.pth) or [BaiduNetDisk(code:2025)](https://pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD_vs_DIAP/weights`
+1. Modified the dataset path in config files. For example, when training SimROD on LOD dataset, modified the `L44-L50` of config file `SimROD/workdirs/LOD/cfg_SimROD.py`
+
+2. Download all the YOLO-X pretrained weight from [here](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.pth) or [BaiduNetDisk(code:2025)](https:`//pan.baidu.com/s/17zEp6-Zz49M7q1O6e5cUfw) or [GoogleDrive](https://drive.google.com/file/d/1zoT8VOwrtebnmDEtXfdQQeRvkVNoXOIx/view?usp=sharing) to `SimROD/weights`
 
 3. Execute the command below:
+
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2 python main.py \
     -f ./workdirs/LOD/cfg_SimROD.py \
     -d 3 \
     -b 12
 ```
+
 ## 6. Acknowledgement
-This project builds upon the [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD) and [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX). We are deeply grateful for their work and contributions. 
+
+This project builds upon the [DIAP](https://github.com/XrKang/RAOD/tree/master/RAOD) and [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX). We are deeply grateful for their work and contributions.
 
 We would like to express our sincere gratitude to the following individuals for their invaluable advice and support: Zechao Hu, Hao Li, Zhengwei Yang, Song Ouyang, Jingyu Xu, Likai Tian, Runqi Wang.
+
 ## 7. Citation
 
 If you use `SimROD` or its methods in your work, please cite the following BibTeX entries:
+
 <details open>
 <summary> bibtex </summary>
 
@@ -180,4 +198,5 @@ If you use `SimROD` or its methods in your work, please cite the following BibTe
       year={2025},
 }
 ```
+
 </details>
