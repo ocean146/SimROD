@@ -1,5 +1,5 @@
 <h2 align="center">
-  SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements
+  [AAAI26] SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements
 </h2>
 
 <p align="center">
@@ -56,8 +56,9 @@
 
 ## 🚀 Updates
 
+- [x] **\[2025.11.08\]** SimROD is accepted by AAAI 2026! Thanks to all co-authors.
 - [x] **\[2025.03.18\]** The code is released.
-- [x] **\[2025.03.10\]** The paper is available on [arXiv](https://arxiv.org/abs/2503.07101).
+<!-- - [x] **\[2025.03.10\]** The paper is available on [arXiv](https://arxiv.org/abs/2503.07101). -->
 
 ## Table of Content
 
